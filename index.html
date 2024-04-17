@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lista de Compras</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: #f3f3f3;
+        padding: 20px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 1200px;
+        background-color: transparent;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container {
+        margin-bottom: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .form-container label, .form-container input, .form-container select, .form-container button {
+        margin-bottom: 10px;
+        color: #4B0082; /* Morado oscuro */
+    }
+
+    .lists-container {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    #giftList, #assignedItems {
+        flex: 1;
+        margin: 0 20px;
+    }
+
+    #giftList li {
+        margin-bottom: 10px;
+        color: #4B0082; /* Morado oscuro */
+    }
+
+    #items option {
+        cursor: pointer;
+    }
+
+    h1, h2 {
+        color: #4B0082; /* Morado oscuro */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+        }
+
+        .lists-container {
+            flex-direction: column;
+        }
+
+        #giftList, #assignedItems {
+            margin: 20px 0;
+        }
+    }
+</style>
+</head>
+<body>
+
+
+
+<div class="container">
+    <div class="form-container">
+        <form id="addForm">
+<h1 style="text-align:center;">Baby Shower Alaia</h1>
+<p style="text-align:justify; padding:4%;">Hola! Gracias por querer bendecir la vida de Alaia. Te pedimos que elijas el regalo que quisieras darle escribiendo tu nombre o el de tu familia en frente del regalo. Todo es muy valioso y agradecido, si quieres acompañar tu regalo con pañales (cualquier etapa) será doble bendición. ¡Gracias!</p>
+            <label for="author">Tu Nombre:</label>
+            <input type="text" id="author" name="author" placeholder="Tu nombre" required>
+          <select id="items">
+        <option value="" disabled selected>Selecciona un ítem</option>
+        <option value="Colchón de cuna 74cm x 100cm">Colchón de cuna 74cm x 100cm</option>
+        <option value="Organizadores">Organizadores</option>
+        <option value="Pañalera">Pañalera</option>
+        <option value="Caneca especial para pañales">Caneca especial para pañales</option>
+        <option value="Cuento de pasta dura">Cuento de pasta dura</option>
+        <option value="Libro de tela">Libro de tela</option>
+        <option value="Sonajeros">Sonajeros</option>
+        <option value="Almohada de lactancia">Almohada de lactancia</option>
+        <option value="Ruido blanco">Ruido blanco</option>
+        <option value="Tapete didáctico">Tapete didáctico</option>
+        <option value="Cambiador portátil">Cambiador portátil</option>
+        <option value="Monitor de video para bebés">Monitor de video para bebés</option>
+        <option value="Lámpara de baja intensidad para bebé">Lámpara de baja intensidad para bebé</option>
+        <option value="Lima eléctrica">Lima eléctrica</option>
+        <option value="Paseador (coche sencillo)">Paseador (coche sencillo)</option>
+        <option value="Primera muda">Primera muda</option>
+        <option value="Toalla para bebé">Toalla para bebé</option>
+        <option value="Toallitas húmedas">Toallitas húmedas</option>
+        <option value="Manta delgada">Manta delgada</option>
+        <option value="Juguete de estimulación temprana">Juguete de estimulación temprana</option>
+        <option value="Móvil (juguete)">Móvil (juguete)</option>
+        <option value="Ropa 3 - 6 meses">Ropa 3 - 6 meses</option>
+        <option value="Ropa 6 - 9 meses">Ropa 6 - 9 meses</option>
+        <option value="Ropa 9 - 12 meses">Ropa 9 - 12 meses</option>
+        <option value="Ropa 12 - 16 meses">Ropa 12 - 16 meses</option>
+        <option value="Ropa 16 - 20 meses">Ropa 16 - 20 meses</option>
+        <option value="Pijama delgada 3- 6 meses">Pijama delgada 3- 6 meses</option>
+        <option value="Pijama delgada 6-12 meses">Pijama delgada 6-12 meses</option>
+        <option value="Pijama 12 - 16 meses">Pijama 12 - 16 meses</option>
+        <option value="Tendido de cuna">Tendido de cuna</option>
+        <option value="Kit de aseo para bebé">Kit de aseo para bebé</option>
+        <option value="Biberones Avent">Biberones Avent</option>
+        <option value="Crema #4">Crema #4</option>
+        <option value="Baberos">Baberos</option>
+        <option value="Medias">Medias</option>
+        <option value="Aspirador nasal">Aspirador nasal</option>
+        <option value="Kit de uñas">Kit de uñas</option>
+        <option value="Kit de primeros auxilios para bebé">Kit de primeros auxilios para bebé</option>
+        <option value="Balacas">Balacas</option>
+        <option value="Camisillas o franelas">Camisillas o franelas</option>
+        <option value="Zapatos">Zapatos</option>
+        <option value="Biblia para bebé">Biblia para bebé</option>
+    </select>
+            <button type="submit">Agregar</button>
+        </form>
+    </div>
+
+    <div class="lists-container">
+        <div id="giftList">
+            <h2>Lista de Regalos</h2>
+            <ul id="giftList">
+  <!-- Los ítems de la lista de regalos aparecerán aquí -->
+  <li>Colchón de cuna 74cm x 100cm</li>
+  <li>Organizadores</li>
+  <li>Pañalera</li>
+  <li>Caneca especial para pañales</li>
+  <li>Cuento de pasta dura</li>
+  <li>Libro de tela</li>
+  <li>Sonajeros</li>
+  <li>Almohada de lactancia</li>
+  <li>Ruido blanco</li>
+  <li>Tapete didáctico</li>
+  <li>Cambiador portátil</li>
+  <li>Monitor de video para bebés</li>
+  <li>Lámpara de baja intensidad para bebé</li>
+  <li>Lima eléctrica</li>
+  <li>Paseador (coche sencillo)</li>
+  <li>Primera muda</li>
+  <li>Toalla para bebé</li>
+  <li>Toallitas húmedas</li>
+  <li>Manta delgada</li>
+  <li>Juguete de estimulación temprana</li>
+  <li>Móvil (juguete)</li>
+  <li>Ropa 3 - 6 meses</li>
+  <li>Ropa 6 - 9 meses</li>
+  <li>Ropa 9 - 12 meses</li>
+  <li>Ropa 12 - 16 meses</li>
+  <li>Ropa 16 - 20 meses</li>
+  <li>Pijama delgada 3- 6 meses</li>
+  <li>Pijama delgada 6-12 meses</li>
+  <li>Pijama 12 - 16 meses</li>
+  <li>Tendido de cuna</li>
+  <li>Kit de aseo para bebé</li>
+  <li>Biberones Avent</li>
+  <li>Crema #4</li>
+  <li>Baberos</li>
+  <li>Medias</li>
+  <li>Aspirador nasal</li>
+  <li>Kit de uñas</li>
+  <li>Kit de primeros auxilios para bebé</li>
+  <li>Balacas</li>
+  <li>Camisillas o franelas</li>
+  <li>Zapatos</li>
+  <li>Biblia para bebé</li>
+</ul>
+        </div>
+
+        <div id="assignedItems">
+            <h2>Lista de Regalos Asignados</h2>
+            <ul>
+                <!-- Las asignaciones aparecerán aquí -->
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('addForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Evitar el comportamiento por defecto del formulario
+        
+        // Obtener el valor del autor
+        var author = document.getElementById('author').value;
+        
+        // Obtener el valor del ítem seleccionado
+        var selectedItem = document.getElementById('items').value;
+
+        if (author && selectedItem) {
+            // Crear un nuevo elemento de lista y añadirlo a la lista de compras asignadas
+            var newItem = document.createElement('li');
+            newItem.innerText = `${author}: ${selectedItem}`;
+            document.getElementById('assignedItems').getElementsByTagName('ul')[0].appendChild(newItem);
+            
+            // Tachar el ítem seleccionado de la lista de regalos
+            var giftListItems = document.getElementById('giftList').getElementsByTagName('li');
+            for (var i = 0; i < giftListItems.length; i++) {
+                if (giftListItems[i].innerText === selectedItem) {
+                    giftListItems[i].style.textDecoration = 'line-through';
+                    break;
+                }
+            }
+            
+            // Eliminar el ítem seleccionado de la lista de opciones
+            var selectOptions = document.getElementById('items').getElementsByTagName('option');
+            for (var j = 0; j < selectOptions.length; j++) {
+                if (selectOptions[j].value === selectedItem) {
+                    selectOptions[j].remove();
+                    break;
+                }
+            }
+            
+            // Limpiar el campo de texto
+            document.getElementById('author').value = '';
+        }
+    });
+</script>
+
+</body>
+</html>
